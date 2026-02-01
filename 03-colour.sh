@@ -21,7 +21,7 @@ VALIDATE() {
     fi
 }
 
-dnf installed mysql  
+dnf list installed mysql  
 # Install if it is not found
 if [$? -ne 0]; then
     dnf install mysql -y
@@ -30,7 +30,7 @@ else
     echo "MySql already exist ... $G skipping $N"
 fi
 
-dnf installed nginx 
+dnf list installed nginx 
 # Install if it is not found
 if [$? -ne 0]; then
    dnf install nginx -y
@@ -39,7 +39,7 @@ else
     echo "nginx already exist ... $G skipping $N"
 fi
 
-dnf installed python3 
+dnf list installed python3 
 # Install if it is not found
 if [$? -ne 0]; then
    dnf install python3 -y
